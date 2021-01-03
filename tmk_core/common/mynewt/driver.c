@@ -22,10 +22,13 @@ keyboard_leds(void)
     return 0;
 }
 
+extern int hid_send_keyboard_report(const void* report, size_t report_size);
+
 static void
 send_keyboard(report_keyboard_t *report)
 {
-    tud_hid_report(0, report, sizeof(report_keyboard_t));
+    //tud_hid_report(0, report, sizeof(report_keyboard_t));
+    hid_send_keyboard_report(report, sizeof(report_keyboard_t));
 }
 
 static void
