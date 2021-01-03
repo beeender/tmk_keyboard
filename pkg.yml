@@ -1,0 +1,20 @@
+pkg.name: tmk_keyboard
+pkg.homepage: "https://github.com/beeender/tmk_keyboard"
+pkg.type: sdk
+pkg.src_dirs:
+    - tmk_core/common
+pkg.include_dirs:
+    - tmk_core/common
+pkg.ign_files:
+    - avr/.*
+    - mbed/.*
+    - chibios/.*
+    - command.c
+    - bootmagic.c
+    - keymap.c
+    - backlight.c
+pkg.deps:
+    - "@apache-mynewt-core/kernel/os"
+    - "@apache-mynewt-core/hw/hal"
+pkg.init:
+    tmk_keyboard_init: 50

@@ -55,6 +55,14 @@ void print_set_sendchar(int8_t (*print_sendchar_func)(uint8_t));
 #define println(s)  printf(s "\r\n")
 #define xprintf  printf
 
+#elif MYNEWT
+
+#include "logcfg/logcfg.h"
+#define print(s) (TMK_LOG_DEBUG(s))
+#define println(s)  printf(s "\r\n")
+// FIXME:
+#define xprintf(s,...)              ((void)0)
+
 #elif defined(__arm__) /* __AVR__ */
 
 #include "mbed/xprintf.h"

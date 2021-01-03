@@ -4,6 +4,9 @@
 #include "util.h"
 #include "action_layer.h"
 #include "hook.h"
+#if MYNEWT
+#include "mynewt/cfg.h"
+#endif
 
 #ifdef DEBUG_ACTION
 #include "debug.h"

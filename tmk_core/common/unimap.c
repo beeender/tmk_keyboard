@@ -5,6 +5,9 @@
 #if defined(__AVR__)
 #   include <avr/pgmspace.h>
 #endif
+#if MYNEWT
+#   include "mynewt/cfg.h"
+#endif
 
 
 /* Keymapping with 16bit action codes */

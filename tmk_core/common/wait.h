@@ -13,6 +13,10 @@ extern "C" {
 #   include "ch.h"
 #   define wait_ms(ms) chThdSleepMilliseconds(ms)
 #   define wait_us(us) chThdSleepMicroseconds(us)
+#elif MYNEWT
+#   include "os/os_cputime.h"
+#   define wait_ms(ms) os_cputime_delay_usecs(ms * 1000);
+#   define wait_us(us) os_cputime_delay_usecs(us);
 #elif defined(__arm__) /* __AVR__ */
 #   include "wait_api.h"
 #endif /* __AVR__ */

@@ -20,7 +20,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <stdint.h>
 #include <stdbool.h>
-
+#ifdef MYNEWT
+#include "mynewt/cfg.h"
+#endif
 
 #if (MATRIX_COLS <= 8)
 typedef  uint8_t    matrix_row_t;
