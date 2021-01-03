@@ -1,4 +1,4 @@
 repo.name: tmk_keyboard
 repo.versions:
-     "0.0.0": "mynewt"
+     "0.0.0": "master"
      "0-latest": "0.0.0"
